@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@1,700&family=Pacifico&family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+ul.nav{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    color: #fff;
+}
+a:hover{
+    color: #ee2475;
+    transition: .5s;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 110px 100px;
+}
+@media (max-width: 1000px){
+    section{
+        padding: 100px 50px;
+    }
+}
+@media (max-width: 600px){
+    section{
+        padding: 125px 30px;
+    }
+}
+section p{
+    max-width: 800px;
+    text-align: center;
+    margin-bottom: 35px;
+    padding-block-end: 0 20px;
+    line-height: 2;
+}
+/* Header block */
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 100px 0;
+}
+header .nav{
+    display: flex;
+}
+header .nav li{
+    margin: 0 15px;
+}
+
+header .nav li:first-child{
+    margin-left: 0;
+}
+header .nav li:last-child{
+    margin-right: 0;
+}
+
+@media (max-width: 1000px){
+    header{
+        padding: 20px 50px;
+    }
+}
+@media (max-width: 700px){
+    header{
+        flex-direction: column;
+    }
+    header h2{
+        margin-bottom: 15px;
+    }
+    header .nav li{
+        margin: 0 7px;
+    }
+}
+.showcase{
+    position: relative;
+    justify-content: center;
+    min-height: 100vh;
+    color: #fff;
+    text-align: center;
+}
+.showcase .showcase-img{
+    background-image: url(./img/burger.jpg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover no-repeat;
+    z-index: -1;
+}
+.showcase .showcase-img::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: .7;
+}
+h1{
+    margin-bottom: 15px;
+    font-size: 65px;
+}
+.showcase h3{
+    margin-bottom: 40px;
+    font-size: 25px;
+}
+.showcase a.btn{
+    padding: 15px 35px;
+    background: transparent;
+    border-radius: 50px;
+    text-transform: uppercase;
+    border: 3px solid darkgoldenrod;
+}
+@media (max-width: 800px){
+    /* .showcase{
+        min-height: 600px;
+    } */
+    .showcase h1{
+        font-size: 32px;
+    }
+    .showcase h3{
+        font-size: 20px;
+    }
+    .showcase a.btn{
+        padding: 15px 50px;
+    }
+    .showcase .showcase-img{
+        background-size: cover;
+    }
+}
